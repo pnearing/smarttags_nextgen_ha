@@ -1,7 +1,7 @@
 import json
 
 from homeassistant.setup import async_setup_component
-from pytest_homeassistant_custom_component.components.diagnostics import get_diagnostics_for_config_entry
+from pytest_homeassistant.components.diagnostics import get_diagnostics_for_config_entry
 
 from .common import TAG_A, create_account_entry, create_entry
 

@@ -4,14 +4,7 @@ import pytest
 
 from .common import OPERATIONS
 
-pytest_plugins = "pytest_homeassistant_custom_component"
-
 API = "custom_components.smarttags_nextgen.api.SmartTagsAPI"
-
-
-@pytest.fixture(autouse=True)
-def auto_enable_custom_integrations(enable_custom_integrations):
-    yield
 
 
 @pytest.fixture

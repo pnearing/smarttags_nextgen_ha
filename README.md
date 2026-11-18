@@ -9,39 +9,39 @@ Phones, tablets, watches and earbuds in your SmartThings Find account show up as
 
 For automations there are two actions: **SmartThings Find NextGen: Request location** (`smarttags_nextgen.locate`) asks the targeted tags for their current location, like their refresh location button, and **SmartThings Find NextGen: Refresh** (`smarttags_nextgen.refresh`) updates all devices without waiting for the update interval.
 
-I only have 1 smart tag so I haven't tested it with more than 1, it should work as I dynamically get the list but it might be broken on certain conditions. If you find bugs, feel free to open an issue.
+I only have 1 smart tag so I haven't tested it with more than 1, it should work as I dynamically get the list but it might be broken on certain conditions.
 
+<!-- ha-marketplace:exclude-start -->
 ## Installation
 
-### Method 1: HACS (Recommended)
+### Home Assistant 2026.11 and later
 
-Since this integration is not currently in the default HACS store, you can easily add it as a Custom Repository:
+SmartThings Find NextGen is a custom integration. Install it from **Settings → Marketplace**, not **Settings → Apps**. HACS is built into Home Assistant as Marketplace starting with 2026.11.
 
-1. Open **HACS** in your Home Assistant dashboard.
-2. Click the **three dots** in the top right corner and select **Custom repositories**.
-3. Paste the URL of this GitHub repository into the **Repository** box.
-4. For **Category**, select **Integration**.
-5. Click **Add**.
-6. Find the **SmartThings Find NextGen** integration in the list and click **Download**.
-7. Restart Home Assistant.
+[![Open SmartThings Find NextGen in the Home Assistant Marketplace](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=pnearing&repository=smarttags_nextgen_ha&category=integration)
 
----
+1. Open **Settings → Marketplace** and select **Add from link**.
+2. Enter `https://github.com/pnearing/smarttags_nextgen_ha`. Connect GitHub if prompted. If asked for a type, select **Integration**.
+3. Open **SmartThings Find NextGen** in Marketplace and select **Install**. Restart Home Assistant if it asks you to, then follow the setup instructions below.
 
-### Method 2: Manual Installation
+If HACS already managed this integration before you upgraded, Home Assistant migrates that installation to Marketplace. Look under **Marketplace → Installed** first. You don't need to remove or re-add your Samsung account or devices.
 
-If you prefer not to use HACS, you can install the integration files directly onto your server:
+### Home Assistant 2026.10 and earlier
 
-1. Download the latest release source code (or clone this repository).
-2. Using an SSH client, Samba, or the File Editor add-on, locate your Home Assistant `config/` directory.
-3. Look for a folder named `custom_components`. If it does not exist, create it.
-4. Copy the `custom_components/smarttags_nextgen` folder from this repository into your `custom_components/` directory, so that you have `config/custom_components/smarttags_nextgen/`.
-5. Restart Home Assistant.
+In **HACS → ⋮ → Custom repositories**, add `https://github.com/pnearing/smarttags_nextgen_ha` as an **Integration**. Download **SmartThings Find NextGen**, then restart Home Assistant.
+
+### Manual installation
+
+1. Download or clone this repository. Copy its `custom_components/smarttags_nextgen` folder into the `custom_components` directory in your Home Assistant configuration folder. Create `custom_components` if it doesn't exist.
+2. Confirm that `custom_components/smarttags_nextgen/manifest.json` is present in your Home Assistant configuration folder, then restart Home Assistant.
+
+<!-- ha-marketplace:exclude-end -->
 
 ## Setup Instructions
 
-1. Go to the Integrations page.
-2. Search "SmartThings Find NextGen".
-3. Choose how to connect:
+1. Go to **Settings → Devices & services → Add integration**.
+2. Search for **SmartThings Find NextGen**.
+3. Choose one of the two sign-in methods below.
 
 ### Option 1: Sign in with Samsung account (sessions renew automatically)
 
@@ -72,11 +72,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contributions
 
-Contributions are welcome! Feel free to open issues or submit pull requests to help improve this integration.
+Contributions are welcome! Feel free to submit pull requests to help improve this integration.
 
 ## Support
 
-For support, please create an issue on the GitHub repository.
+For integration bugs, see the [upstream issue tracker](https://github.com/saarglobin/smarttags_nextgen_ha/issues).
 
 ## Roadmap
 

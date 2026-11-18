@@ -2,7 +2,7 @@
 import aiohttp
 from homeassistant import config_entries
 from homeassistant.data_entry_flow import FlowResultType
-from pytest_homeassistant_custom_component.common import MockConfigEntry
+from pytest_homeassistant.common import MockConfigEntry
 
 from custom_components.smarttags_nextgen.const import DOMAIN
 
