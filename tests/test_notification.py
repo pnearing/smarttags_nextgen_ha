@@ -3,7 +3,7 @@ from unittest.mock import AsyncMock, patch
 
 from homeassistant.exceptions import HomeAssistantError
 import pytest
-from pytest_homeassistant_custom_component.common import async_get_persistent_notifications
+from pytest_homeassistant.common import async_get_persistent_notifications
 
 from custom_components.smarttags_nextgen.api import SmartTagsAuthError
 
